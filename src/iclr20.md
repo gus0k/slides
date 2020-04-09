@@ -8,15 +8,12 @@ date: April 10, 2020
 
 ::: incremental
 
-* Massive deployment of renewables is needed
-* Most renewables are intermitent (solar, wind)
+* Massive deployment of renewable energy resources is needed
+* Most renewables are intermittent (solar, wind)
 * Deploying renewables requires grid flexibility 
-* How should we measure and implement grid flexibility?
-    - Real time pricing
-    - Local energy markets
-    - Time of Use tariffs
-    - Distributed control of appliances
-* A benchmkar is needed!
+* Grid flexibility is hard to measure.
+* How should we implement more grid flexibility?
+* A benchmark is needed!
 
 :::
 
@@ -114,9 +111,9 @@ properties of the object.
 
 ::: incremental
 
-* Mostly time-series of energy conusmption only.
+* Mostly time-series of energy consumption only.
 * Very useful to forecast energy consumption ... _ceteris paribus_
-* Not sufficent to measure flexibility:
+* Not sufficient to measure flexibility:
     -  Users of the dataset with too many degrees of freedom
     -  Reproducibility can not be guaranteed
 
@@ -130,7 +127,7 @@ properties of the object.
 Start: At the consumer level, most datasets contain only energy consumption
 information. 
 
-End: This is not sufficient to evaluate grid flexibiliy in a reliable manner. We
+End: This is not sufficient to evaluate grid flexibility in a reliable manner. We
 need a tighter specification.
 
 ::::::::::::::::::::::::::::::
@@ -142,14 +139,14 @@ need a tighter specification.
 
 ::: incremental
 
-1. A model of how consumers responsd to changes in price and environment
+1. A model of how consumers respond to changes in price and environment
    (flexibility).
 2. A performance metric for flexibility
     - We propose: matched renewable generation with demand.
 3. Extra requirements:
-    - Enegy generation and mix
+    - Energy generation and mix
     - Power system specification
-    - A baseload consumption for each player
+    - A base load consumption for each player
 
 
 <!--
@@ -188,11 +185,11 @@ enabling interesting artificial intelligence applications. We proceed to present
 Example:
 
 ::: incremental
-* collect large number of datasets
-* label data with the maximum flexibility achivable
-* learn from the pairs (grid with consumers, maximum flexibility) the relevant features of Dataset
-* example: total storage capacity is the only important factor...
-* use the learned model to predict flexibility in unseen grids
+* Collect large number of datasets
+* Label data with the maximum flexibility achievable
+* Learn from the pairs (grid with consumers, maximum flexibility) the relevant features of Dataset
+* Example: total storage capacity is the only important factor...
+* Use the learned model to predict flexibility in new grids
 :::
 
 
