@@ -1,5 +1,5 @@
 # Compilation of slides
 
-1. ICLR 2020 Workshop, Tackling Climate Change with AI
+A collection of my slides, using reveal.js
 
-[ICLR 2020 Workshop, Tackling Climate Change with AI](iclr20.html?print-pdf#/)
+1. ICLR 2020 Workshop, Tackling Climate Change with AI [ICLR 2020 Workshop, Tackling Climate Change with AI](iclr20.html?print-pdf#/)
