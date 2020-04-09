@@ -43,181 +43,59 @@
 <h1>Motivation</h1>
 <div>
 <ul>
-<li class="fragment fade-in-then-semi-out">Massive deployment of renewables is needed</li>
-<li class="fragment fade-in-then-semi-out">Most renewables are intermitent (solar, wind)</li>
+<li class="fragment fade-in-then-semi-out">Massive deployment of renewable energy resources is needed</li>
+<li class="fragment fade-in-then-semi-out">Most renewables are intermittent (solar, wind)</li>
 <li class="fragment fade-in-then-semi-out">Deploying renewables requires grid flexibility</li>
 <li class="fragment fade-in-then-semi-out">Grid flexibility is hard to measure.</li>
 <li class="fragment fade-in-then-semi-out">How should we implement more grid flexibility?</li>
-<li class="fragment fade-in-then-semi-out">A benchmkar is needed!</li>
+<li class="fragment fade-in-then-semi-out">A benchmark is needed!</li>
 </ul>
 </div>
-<!-- Speaker notes -->
-<aside class="notes">
-<p>Start: To achieve a deep decarbonization of the grid we need to deploy renewables.</p>
-<p>End: It is unclear what the best demand response mechanism is</p>
-</aside>
-<!--
- 
-# What is the best demand response program to achieve more flexibility?
-
-::: incremental
-
-* Simple Time-of-Use tariff with 2 or 3 periods?
-* Real time pricing of electricity?
-* Distributed controll of appliances such as water heaters?
-* Local energy markets?
-
-:::
-
-
-
-:::::::::::::::::::::::::::::: notes 
-
-Start: Some popular mechanisms are:
-
-
-End: Underlying all these differences, there is a need of a benchmark to compare
-the different applications in a reproducible way. Let's look at the case of
-images.
-
-:::::::::::::::::::::::::::::: 
-
--->
-<!-- 
-
-# Images as benchmarks
-
-::::: {.columns}
-
-:::: {.column width="70%"}
-
-![RGB](fig/rgb.jpeg)
-
-::::
-
-:::: {.column width="30%"}
-
-::: incremental
-
-* Standard format to specify an image: RGB
-* Can be used to represent any "image"
-* Can be used to identify objects: such as circle
-* Lacks information: is it a circle, a sphere or a cylinder?
-
-:::
-
-::::
-
-:::::
-
-
-:::::::::::::::::::::::::::::: notes
-
-Start: 2D objects can be described by images, and the format is widely known.
-
-End: This format, though, is not suited for questions involving the 3d
-properties of the object.
-
-::::::::::::::::::::::::::::::
-
--->
 </section>
 <section id="datasets-in-demand-response" class="slide level1">
 <h1>Datasets in demand response</h1>
 <div>
 <ul>
-<li class="fragment fade-in-then-semi-out">Mostly time-series of energy conusmption only.</li>
+<li class="fragment fade-in-then-semi-out">Mostly time-series of energy consumption only.</li>
 <li class="fragment fade-in-then-semi-out">Very useful to forecast energy consumption … <em>ceteris paribus</em></li>
-<li class="fragment fade-in-then-semi-out">Not sufficent to measure flexibility:
+<li class="fragment fade-in-then-semi-out">Not sufficient to measure flexibility:
 <ul>
 <li class="fragment fade-in-then-semi-out">Users of the dataset with too many degrees of freedom</li>
 <li class="fragment fade-in-then-semi-out">Reproducibility can not be guaranteed</li>
 </ul></li>
 </ul>
 </div>
-<!-- Speaker notes -->
-<aside class="notes">
-<p>Start: At the consumer level, most datasets contain only energy consumption information.</p>
-<p>End: This is not sufficient to evaluate grid flexibiliy in a reliable manner. We need a tighter specification.</p>
-</aside>
 </section>
 <section id="benchmark-requirements" class="slide level1">
 <h1>Benchmark requirements</h1>
 <div>
 <ol type="1">
-<li class="fragment fade-in-then-semi-out">A model of how consumers responsd to changes in price and environment (flexibility).</li>
+<li class="fragment fade-in-then-semi-out">A model of how consumers respond to changes in price and environment (flexibility).</li>
 <li class="fragment fade-in-then-semi-out">A performance metric for flexibility
 <ul>
 <li class="fragment fade-in-then-semi-out">We propose: matched renewable generation with demand.</li>
 </ul></li>
 <li class="fragment fade-in-then-semi-out">Extra requirements:
 <ul>
-<li class="fragment fade-in-then-semi-out">Enegy generation and mix</li>
+<li class="fragment fade-in-then-semi-out">Energy generation and mix</li>
 <li class="fragment fade-in-then-semi-out">Power system specification</li>
-<li class="fragment fade-in-then-semi-out">A baseload consumption for each player</li>
+<li class="fragment fade-in-then-semi-out">A base load consumption for each player</li>
 </ul></li>
 </ol>
-<!--
-1. Consumer Specification
-    - Energy consuption with respect to reference price
-    - How consumption changes in response to price
-1. Energy Generation
-    - Quantity generated and mixture of renewables
-2. Power Grid Specification
-    - Location of loads, phyisical characteristics of cables, transformers, etc
-4. Performance Metrics
-    - Measure the ability to match energy demand and renewable generation
--->
 </div>
-<!-- Speaker notes -->
-<aside class="notes">
-<p>Start: We identified key ingredients in a grid flexibility benchmark.</p>
-<p>End: The proposed specification will enable the collection of large datasets, enabling interesting artificial intelligence applications. We proceed to present 2 of them.</p>
-</aside>
 </section>
 <section id="benchmarks-can-enable-ai-deep-learning" class="slide level1">
 <h1>Benchmarks can enable AI: Deep Learning</h1>
 <p>Example:</p>
 <div>
 <ul>
-<li class="fragment fade-in-then-semi-out">collect large number of datasets</li>
-<li class="fragment fade-in-then-semi-out">label data with the maximum flexibility achivable</li>
-<li class="fragment fade-in-then-semi-out">learn from the pairs (grid with consumers, maximum flexibility) the relevant features of Dataset</li>
-<li class="fragment fade-in-then-semi-out">example: total storage capacity is the only important factor…</li>
-<li class="fragment fade-in-then-semi-out">use the learned model to predict flexibility in unseen grids</li>
+<li class="fragment fade-in-then-semi-out">Collect large number of datasets</li>
+<li class="fragment fade-in-then-semi-out">Label data with the maximum flexibility achievable</li>
+<li class="fragment fade-in-then-semi-out">Learn from the pairs (grid with consumers, maximum flexibility) the relevant features of Dataset</li>
+<li class="fragment fade-in-then-semi-out">Example: total storage capacity is the only important factor…</li>
+<li class="fragment fade-in-then-semi-out">Use the learned model to predict flexibility in new grids</li>
 </ul>
 </div>
-<!-- Speaker notes -->
-<aside class="notes">
-<p>Start:</p>
-</aside>
-<!--
- 
-
-
-# Use cases for AI: Reinforcement Learning
-
-Example:
-
-::: incremental
-
-* end-customers' flexibility can be obtained as an optimization problem
-* use RL to learn the flexibility model 
-* use RL trained agents to simply and accelerate simulations
-
-:::
-
-
-:::::::::::::::::::::::::::::: notes
-
-Start: 
-
-End: 
-
-::::::::::::::::::::::::::::::
-
-
--->
 </section>
 <section id="the-end" class="slide level1">
 <h1>The END</h1>
