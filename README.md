@@ -2,4 +2,4 @@
 
 1. ICLR 2020 Workshop, Tackling Climate Change with AI
 
-[ICLR 2020 Workshop, Tackling Climate Change with AI](_ready/iclr20.html?print-pdf#/)
+[ICLR 2020 Workshop, Tackling Climate Change with AI](iclr20.html?print-pdf#/)
