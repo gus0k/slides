@@ -54,9 +54,10 @@ Example:
 * Collect large number of datasets
 * Label data with the maximum flexibility achievable
 * Learn from the pairs (grid with consumers, maximum flexibility) the relevant features of Dataset
-* Example: total storage capacity is the only important factor...
 * Use the learned model to predict flexibility in new grids
 :::
 
 
 # The END
+
+More details in the paper
