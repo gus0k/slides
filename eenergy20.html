@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Diego Kiedanski, Ariel Orda, Daniel Kofman">
+  <meta name="dcterms.date" content="2020-06-22">
+  <title>Discrete and Stochastic Coalitional Storage Games</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="src/reveal.js/css/reset.css">
+  <link rel="stylesheet" href="src/reveal.js/css/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="src/reveal.js/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'src/reveal.js/css/print/pdf.css' : 'src/reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="src/reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Discrete and Stochastic Coalitional Storage Games</h1>
+  <p class="author">Diego Kiedanski, Ariel Orda, Daniel Kofman</p>
+  <p class="date">June 22, 2020</p>
+</section>
+
+<section id="outline" class="slide level1">
+<h1>Outline</h1>
+<div>
+<ol type="1">
+<li class="fragment fade-in-then-semi-out">What are coalitional storage games?</li>
+<li class="fragment fade-in-then-semi-out">What was known about them?</li>
+<li class="fragment fade-in-then-semi-out">New results
+<ul>
+<li class="fragment fade-in-then-semi-out">General existance of the core.</li>
+<li class="fragment fade-in-then-semi-out">Extending the model: stochasticity.</li>
+<li class="fragment fade-in-then-semi-out">Extending the model: discretness.</li>
+</ul></li>
+<li class="fragment fade-in-then-semi-out">Numerical results</li>
+<li class="fragment fade-in-then-semi-out">Perspectives</li>
+</ol>
+</div>
+</section>
+<section id="csg-introduction" class="slide level1">
+<h1>CSG: Introduction</h1>
+<p><img src="src/description.jpg" alt="drawing" width="1000"/></p>
+</section>
+<section id="csg-example" class="slide level1">
+<h1>CSG: Example</h1>
+<p><img src="src/game.jpg" alt="drawing" width="1000"/></p>
+</section>
+<section id="csg-the-core" class="slide level1">
+<h1>CSG: The Core</h1>
+<p><img src="src/core.jpg" alt="drawing" width="700"/></p>
+</section>
+<section id="what-was-known" class="slide level1">
+<h1>What was known</h1>
+<div>
+<ul>
+<li class="fragment fade-in-then-semi-out">No ramp constraints -&gt; Non-empty core (even with stochastic demand)</li>
+<li class="fragment fade-in-then-semi-out">With ramp constraints and deterministic demand
+<ul>
+<li class="fragment fade-in-then-semi-out">Some families of games had non-empty cores</li>
+<li class="fragment fade-in-then-semi-out">Some families of games were convex.</li>
+</ul></li>
+<li class="fragment fade-in-then-semi-out">No results for non-continous battery sizes.</li>
+</ul>
+</div>
+</section>
+<section id="new-results" class="slide level1">
+<h1>New results</h1>
+<div>
+<ul>
+<li class="fragment fade-in-then-semi-out">All coalitional storage games with continuous battery size and deterministic profiles have non-empty cores.</li>
+<li class="fragment fade-in-then-semi-out">Non-empty core also for the case with stochastic demand profiles.</li>
+<li class="fragment fade-in-then-semi-out">Core can be empty for discrete battery-sizes, but the error is small.</li>
+</ul>
+</div>
+</section>
+<section id="existance-of-the-core-for-the-general-case" class="slide level1">
+<h1>Existance of the core for the general case</h1>
+<h2 id="idea">Idea</h2>
+<p>Write the problem as an LP, use results from Linear Programming Games.</p>
+</section>
+    </div>
+  </div>
+
+  <script src="src/reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+width: '100%',    height: '100%',
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'src/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'src/reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'src/reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
