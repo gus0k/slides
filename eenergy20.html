@@ -61,44 +61,172 @@
 </section>
 <section id="csg-introduction" class="slide level1">
 <h1>CSG: Introduction</h1>
-<p><img src="src/description.jpg" alt="drawing" width="1000"/></p>
+<p><img src="src/eenergy20/none.png" alt="drawing" width="1000"/></p>
+</section>
+<section id="csg-introduction-1" class="slide level1">
+<h1>CSG: Introduction</h1>
+<p><img src="src/eenergy20/only_1.png" alt="drawing" width="1000"/></p>
+</section>
+<section id="csg-introduction-2" class="slide level1">
+<h1>CSG: Introduction</h1>
+<p><img src="src/eenergy20/only_2.png" alt="drawing" width="1000"/></p>
+</section>
+<section id="csg-introduction-3" class="slide level1">
+<h1>CSG: Introduction</h1>
+<p><img src="src/eenergy20/all_but_cost.png" alt="drawing" width="1000"/></p>
+</section>
+<section id="csg-introduction-4" class="slide level1">
+<h1>CSG: Introduction</h1>
+<p><img src="src/eenergy20/csg.md_full.png" alt="drawing" width="999"/></p>
+</section>
+<section id="csg-introduction-5" class="slide level1">
+<h1>CSG: Introduction</h1>
+<p><img src="src/eenergy20/core4.png" alt="drawing" width="600"/></p>
 </section>
 <section id="csg-example" class="slide level1">
 <h1>CSG: Example</h1>
-<p><img src="src/game.jpg" alt="drawing" width="1000"/></p>
+<p><img src="src/eenergy20/game.jpg" alt="drawing" width="1000"/></p>
 </section>
 <section id="csg-the-core" class="slide level1">
 <h1>CSG: The Core</h1>
-<p><img src="src/core.jpg" alt="drawing" width="700"/></p>
+<p><img src="src/eenergy20/core.jpg" alt="drawing" width="700"/></p>
 </section>
 <section id="what-was-known" class="slide level1">
 <h1>What was known</h1>
 <div>
 <ul>
-<li class="fragment fade-in-then-semi-out">No ramp constraints -&gt; Non-empty core (even with stochastic demand)</li>
-<li class="fragment fade-in-then-semi-out">With ramp constraints and deterministic demand
+<li class="fragment fade-in-then-semi-out">No ramp constraints -&gt; Non-empty core (even with stochastic demand) [1]</li>
+<li class="fragment fade-in-then-semi-out">With ramp constraints and deterministic demand [2]
 <ul>
 <li class="fragment fade-in-then-semi-out">Some families of games had non-empty cores</li>
 <li class="fragment fade-in-then-semi-out">Some families of games were convex.</li>
 </ul></li>
-<li class="fragment fade-in-then-semi-out">No results for non-continous battery sizes.</li>
+<li class="fragment fade-in-then-semi-out">No results for discrete battery sizes.</li>
 </ul>
+<p>[1] P. Chakraborty et al. 2018. Sharing Storage in a Smart Grid: A Coalitional Game Approach.</p>
+<p>[2] D. Kiedanski et al. 2019. The Effect of RampConstraints on Coalitional Storage Games.</p>
 </div>
 </section>
 <section id="new-results" class="slide level1">
 <h1>New results</h1>
 <div>
 <ul>
-<li class="fragment fade-in-then-semi-out">All coalitional storage games with continuous battery size and deterministic profiles have non-empty cores.</li>
-<li class="fragment fade-in-then-semi-out">Non-empty core also for the case with stochastic demand profiles.</li>
-<li class="fragment fade-in-then-semi-out">Core can be empty for discrete battery-sizes, but the error is small.</li>
+<li class="fragment fade-in-then-semi-out">CSG with continous battery size (deterministic and stochastic)
+<ul>
+<li class="fragment fade-in-then-semi-out">Non-empty core.</li>
+<li class="fragment fade-in-then-semi-out">Efficient algorithm to find a payoff in the core.</li>
+</ul></li>
+<li class="fragment fade-in-then-semi-out">CSG with discrete battery size
+<ul>
+<li class="fragment fade-in-then-semi-out">Core can be empty</li>
+<li class="fragment fade-in-then-semi-out">Maximum insatisfaction is bounded.</li>
+</ul></li>
 </ul>
 </div>
 </section>
-<section id="existance-of-the-core-for-the-general-case" class="slide level1">
-<h1>Existance of the core for the general case</h1>
-<h2 id="idea">Idea</h2>
-<p>Write the problem as an LP, use results from Linear Programming Games.</p>
+<section id="linear-production-games" class="slide level1">
+<h1>Linear Production Games</h1>
+<h2 id="well-studied-cooperative-game">Well studied cooperative game</h2>
+<div>
+<ul>
+<li class="fragment fade-in-then-semi-out">Players have resources</li>
+<li class="fragment fade-in-then-semi-out">They form coalitions and they build things with their resources</li>
+<li class="fragment fade-in-then-semi-out">The value of each coalition is the maximum value they can atain.</li>
+<li class="fragment fade-in-then-semi-out">The value is the solution of an LP</li>
+<li class="fragment fade-in-then-semi-out">Non-empty cores.</li>
+<li class="fragment fade-in-then-semi-out">The proof uses the dual of the Grand Coalition’s LP</li>
+</ul>
+</div>
+</section>
+<section id="csg-non-empty-core" class="slide level1">
+<h1>CSG: Non-empty core</h1>
+<div>
+<ul>
+<li class="fragment fade-in-then-semi-out">Value of each coalition as a solution of an LP</li>
+<li class="fragment fade-in-then-semi-out"><span class="math inline">\(v(S) = \min\{ cx \colon Ax \leq B1_S, x\geq0\}\)</span></li>
+<li class="fragment fade-in-then-semi-out">Not exactly Linear Production Game, but we can use the same tools.</li>
+<li class="fragment fade-in-then-semi-out">Solution of the dual in the core.</li>
+</ul>
+</div>
+</section>
+<section id="csg-stochastic.-motivation." class="slide level1">
+<h1>CSG stochastic. Motivation.</h1>
+<div>
+<ul>
+<li class="fragment fade-in-then-semi-out"><span class="math inline">\(\Omega = \{ w_0, w_1\}\)</span>, <span class="math inline">\(p_0 = p_1 = \frac 1 2\)</span>, respectively.</li>
+<li class="fragment fade-in-then-semi-out"><span class="math inline">\(L_0 = 0\)</span>, <span class="math inline">\(L_1 = 3\)</span></li>
+<li class="fragment fade-in-then-semi-out"><span class="math inline">\(p^l = 1, p^h = 5\)</span>. Each unit of battery costs <span class="math inline">\(3\)</span> and ramp constraints are large enough.</li>
+<li class="fragment fade-in-then-semi-out"><span class="math inline">\(v(B) = \min_B \left\{3B + 1\times\min\{ B, \frac 3 2\} + 5\times\max\{\frac 3 2 - B, 0\} \right\}\)</span></li>
+<li class="fragment fade-in-then-semi-out">Solution using average case is <span class="math inline">\(B^* = \frac 3 2\)</span>, <span class="math inline">\(v(B^*) = 6\)</span>.</li>
+<li class="fragment fade-in-then-semi-out">If <span class="math inline">\(w_0\)</span>, then observed cost is <span class="math inline">\(\frac 9 2\)</span>.</li>
+<li class="fragment fade-in-then-semi-out">If <span class="math inline">\(w_1\)</span>, then observed cost is <span class="math inline">\(\frac{27}{2}\)</span>.</li>
+<li class="fragment fade-in-then-semi-out">Average cost of <span class="math inline">\(9\)</span></li>
+<li class="fragment fade-in-then-semi-out">Average cost could have been <span class="math inline">\(7.5\)</span> by buying no battery.</li>
+<li class="fragment fade-in-then-semi-out">Value of Stochastic Solution: <span class="math inline">\(\frac 3 2\)</span> (<span class="math inline">\(16\%\)</span> of the cost).</li>
+</ul>
+</div>
+<!---
+The optimal solution of the problem in Equation ~\ref{eq:example_cost_det} is $B^*=\frac 3 2$  and $v(B^*) = 6$.
+
+Analogously, we can find that, for scenario $w_0$, the optimal battery size is $0$ at a total cost of $0$, while for scenario $w_1$, the optimal battery size is $3$ with a total cost of $12$.
+
+We are interested in the cost incurred by buying the battery obtained solving the average case, but experiencing the real consumption in each of the two scenarios.
+
+For scenario $\omega_0$, the cost is: $C_{\omega_0} \overset{\Delta}{=} 3 \times \frac 3 2 + \min\{\frac 3 2, 0\} + 5\max\{0 - \frac 3 2, 0\} = \frac 9 2 $
+and for scenario $\omega_1$ it is: $C_{\omega_1} \overset{\Delta}{=} 3 \times  \frac 3 2 + \min\{\frac 3 2, 3\} + 5\max\{3 - \frac3 2, 0\} = \frac{27}{2}$.
+
+Hence, the average cost experienced is: $C_{\omega_0}p + C_{\omega_0}(1-p) = \frac{1}{2}\frac{9}{2} + \frac{1}{2}\frac{27}{2} = 9$. However, the cost could have been decreased by buying instead a battery of size $0$ for a total cost of $7.5$ with a reduction of $1.5$ ($16\%$). This value, $1.5$, is known by the Stochastic Programming community (see \cite{kall1994stochastic}) as the Value of the Stochastic Solution: it is a measure of how much can be gained by considering the stochastic problem instead of the deterministic one.
+-->
+</section>
+<section id="csg-stochastic" class="slide level1">
+<h1>CSG Stochastic</h1>
+<div>
+<ul>
+<li class="fragment fade-in-then-semi-out">Two stage stochastic program
+<ul>
+<li class="fragment fade-in-then-semi-out">First decision is to decide on battery size</li>
+<li class="fragment fade-in-then-semi-out">Second stage decision how much energy to buy</li>
+</ul></li>
+<li class="fragment fade-in-then-semi-out"><span class="math inline">\(\Omega &lt; \infty \rightarrow\)</span> is just one big LP</li>
+<li class="fragment fade-in-then-semi-out">We can recover techniques from the deterministic case.</li>
+</ul>
+</div>
+</section>
+<section id="csg-discrete" class="slide level1">
+<h1>CSG Discrete</h1>
+<div>
+<ul>
+<li class="fragment fade-in-then-semi-out">Core can be empty.
+<ul>
+<li class="fragment fade-in-then-semi-out">The techniques before no longer work</li>
+<li class="fragment fade-in-then-semi-out">Duality gap is non-zero.</li>
+</ul></li>
+<li class="fragment fade-in-then-semi-out">Gap between value of discrete and continuous solution does not depend on the load.</li>
+<li class="fragment fade-in-then-semi-out">We can use that to bound the maximum deviation.</li>
+</ul>
+</div>
+</section>
+<section id="relative-maximum-deviation" class="slide level1">
+<h1>Relative maximum deviation</h1>
+<h2 id="due-to-discreteness-of-the-battery.">Due to discreteness of the battery.</h2>
+<p><img src="src/eenergy20/img01.png" alt="drawing" width="700"/></p>
+</section>
+<section id="computing-payoffs-with-observed-costs." class="slide level1">
+<h1>Computing payoffs with observed costs.</h1>
+<p><img src="src/eenergy20/img02.png" alt="drawing" width="700"/></p>
+</section>
+<section id="conclusions" class="slide level1">
+<h1>Conclusions</h1>
+<div>
+<ul>
+<li class="fragment fade-in-then-semi-out">Cooperative Storage Games resulted in increase of 150% of the storage capacity of the community.</li>
+<li class="fragment fade-in-then-semi-out">Re-evaluating the payoff of the core with the realized costs is an important topic.</li>
+<li class="fragment fade-in-then-semi-out">Scenario generation plays an important role in the model and offers a good avenue for imporovemnt.</li>
+</ul>
+</div>
+</section>
+<section id="thanks" class="slide level1">
+<h1>Thanks</h1>
 </section>
     </div>
   </div>
@@ -113,11 +241,28 @@
 width: '100%',    height: '100%',
         // Push each slide change to the browser history
         history: true,
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
 
         // Optional reveal.js plugins
         dependencies: [
           { src: 'src/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'src/reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'src/reveal.js/plugin/math/math.js', async: true },
           { src: 'src/reveal.js/plugin/notes/notes.js', async: true }
         ]
       });
